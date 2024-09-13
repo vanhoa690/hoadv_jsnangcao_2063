@@ -3,20 +3,12 @@ document.addEventListener("DOMContentLoaded", init);
 function init() {
   displayProductList();
 }
+async function handleDelete(id) {
+  await axios.delete("http://localhost:3000/products/" + id);
+}
 
-function displayProductList() {
-  const products = [
-    {
-      id: 1,
-      title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-      price: 109.95,
-    },
-    {
-      id: 2,
-      title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-      price: 109.95,
-    },
-  ];
+async function displayProductList() {
+  const { data: products } = await axios.get("http://localhost:3000/products");
 
   const list = document.getElementById("list");
 
@@ -39,7 +31,7 @@ function displayProductList() {
           <td>${product.title}</td>
           <td>${product.price} VND</td>
           <td>
-            <button class="btn btn-danger">Delete</button>
+            <button class="btn btn-danger" onClick="handleDelete('${product.id}')">Delete</button>
             <button class="btn btn-info">Edit</button>
           </td>
         </tr>
@@ -49,4 +41,20 @@ function displayProductList() {
       </tbody>
     </table>
   `;
+}
+
+async function handleSubmit(event) {
+  console.log("c");
+
+  event.preventDefault();
+  console.log("a");
+
+  const title = document.getElementById("title").value;
+  const price = document.getElementById("price").value;
+
+  const { data } = await axios.post("http://localhost:3000/products", {
+    title,
+    price,
+  });
+  console.log(data);
 }
