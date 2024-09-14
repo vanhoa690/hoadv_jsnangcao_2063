@@ -29,7 +29,12 @@ async function displayProductList() {
           <td>${product.price} VND</td>
           <td>
             <button class="btn btn-danger" onClick="handleDelete('${product.id}')">Delete</button>
-            <button class="btn btn-info">Edit</button>
+            <button class="btn btn-info"  type="button"
+        data-toggle="modal"
+        data-target="#exampleModal">Edit</button>
+         <a class="btn btn-info"  type="button"
+      href='/edit.html?id=${product.id}'
+       >Link Edit</a>
           </td>
         </tr>
       `

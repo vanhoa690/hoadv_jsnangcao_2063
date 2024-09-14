@@ -11,9 +11,9 @@ async function handleSubmit(event) {
   const title = document.getElementById("title").value;
   const price = document.getElementById("price").value;
 
-  const { data } = await axios.post("http://localhost:3000/products", {
+  await axios.post("http://localhost:3000/products", {
     title,
     price,
   });
-  console.log(data);
+  window.location.href = "/";
 }
