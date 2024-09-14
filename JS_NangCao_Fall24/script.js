@@ -1,10 +1,7 @@
-document.addEventListener("DOMContentLoaded", init);
-
-function init() {
-  displayProductList();
-}
 async function handleDelete(id) {
-  await axios.delete("http://localhost:3000/products/" + id);
+  if (window.confirm("Xoa")) {
+    await axios.delete("http://localhost:3000/products/" + id);
+  }
 }
 
 async function displayProductList() {
@@ -44,10 +41,7 @@ async function displayProductList() {
 }
 
 async function handleSubmit(event) {
-  console.log("c");
-
   event.preventDefault();
-  console.log("a");
 
   const title = document.getElementById("title").value;
   const price = document.getElementById("price").value;
@@ -56,5 +50,6 @@ async function handleSubmit(event) {
     title,
     price,
   });
-  console.log(data);
 }
+
+displayProductList();
