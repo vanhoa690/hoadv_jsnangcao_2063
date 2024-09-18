@@ -5,11 +5,29 @@ console.log(listElement);
 // 2. innerHTML: update DOM, su dung ``: Huyen doi (ben trai so 1)
 
 // 3: Chen Du Lieu
-const product = {
-  title: "San pham AA+",
-  price: 100000,
-};
+const products = [
+  {
+    id: 1,
+    title: "San pham AA+",
+    price: 100000,
+  },
+  {
+    id: 2,
+    title: "San pham B+",
+    price: 100000,
+  },
+  {
+    id: 2,
+    title: "San pham C+",
+    price: 100000,
+  },
+];
 
+function sayHello() {}
+// arrow function
+const sayHello2 = () => {};
+
+// map: [1,2] => function (item x 2) => [2, 4]
 listElement.innerHTML = `
  <table class="table">
         <thead>
@@ -21,7 +39,9 @@ listElement.innerHTML = `
           </tr>
         </thead>
         <tbody>
-          <tr>
+        ${products.map(
+          (product) => `
+            <tr>
             <th scope="row">1</th>
             <td>${product.title}</td>
             <td>${product.price} VND</td>
@@ -30,18 +50,8 @@ listElement.innerHTML = `
               <button class="btn btn-info">Edit</button>
             </td>
           </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-          </tr>
+          `
+        )}
         </tbody>
       </table>
       `;
