@@ -1,16 +1,47 @@
-const myName = "Hoadv"; // 1. string
-const age = 34; // 2. number
-const passMon = true; // 3. boolean : true, false
-const myList = ["Hoadv", 34, true]; // 4. Array
-const student = {
-  name: "Hoadv",
-  age: 34,
-  passMon: true,
-}; // 5. object: { key: value}
-console.log(myName, age, passMon, myList, student);
-// 6. ham`: function
-function sayHello(name) {
-  console.log("Xin chao " + name); // echo php....
-}
+// 1. Truy cap DOM: document.getElementById(id)
+const listElement = document.getElementById("list");
+console.log(listElement);
 
-sayHello("Hoadv");
+// 2. innerHTML: update DOM, su dung ``: Huyen doi (ben trai so 1)
+
+// 3: Chen Du Lieu
+const product = {
+  title: "San pham AA+",
+  price: 100000,
+};
+
+listElement.innerHTML = `
+ <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Title</th>
+            <th scope="col">Price</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>${product.title}</td>
+            <td>${product.price} VND</td>
+            <td>
+              <button class="btn btn-danger">Delete</button>
+              <button class="btn btn-info">Edit</button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+      `;
