@@ -28,6 +28,25 @@ function sayHello() {}
 const sayHello2 = () => {};
 
 // map: [1,2] => function (item x 2) => [2, 4]
+//products: [{}] => [`<tr></tr>`, `<tr></tr>`]
+
+function renderRowTable(product) {
+  return `
+        <tr>
+            <th scope="row">1</th>
+            <td>${product.title}</td>
+            <td>${product.price} VND</td>
+            <td>
+              <button class="btn btn-danger">Delete</button>
+              <button class="btn btn-info">Edit</button>
+            </td>
+          </tr>
+ `;
+}
+
+// const test = products.map(renderRowTable).join("");
+// console.log(test);
+
 listElement.innerHTML = `
  <table class="table">
         <thead>
@@ -39,19 +58,7 @@ listElement.innerHTML = `
           </tr>
         </thead>
         <tbody>
-        ${products.map(
-          (product) => `
-            <tr>
-            <th scope="row">1</th>
-            <td>${product.title}</td>
-            <td>${product.price} VND</td>
-            <td>
-              <button class="btn btn-danger">Delete</button>
-              <button class="btn btn-info">Edit</button>
-            </td>
-          </tr>
-          `
-        )}
+        ${products.map(renderRowTable).join("")}
         </tbody>
       </table>
       `;
