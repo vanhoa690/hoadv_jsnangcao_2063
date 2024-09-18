@@ -31,7 +31,7 @@ async function displayProductList() {
             <button class="btn btn-danger" onClick="handleDelete('${product.id}')">Delete</button>
             <button class="btn btn-info"  type="button"
         data-toggle="modal"
-        data-target="#exampleModal">Edit</button>
+        data-target="#exampleModal" id='${product.id}'>Edit</button>
          <a class="btn btn-info"  type="button"
       href='/edit.html?id=${product.id}'
        >Link Edit</a>
@@ -47,6 +47,7 @@ async function displayProductList() {
 
 async function handleSubmit(event) {
   event.preventDefault();
+  console.log("id", event.relatedTarget.id);
 
   const title = document.getElementById("title").value;
   const price = document.getElementById("price").value;
