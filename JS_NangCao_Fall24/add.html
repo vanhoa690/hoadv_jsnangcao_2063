@@ -11,8 +11,8 @@
   </head>
   <body>
     <div class="container">
-      <h1>Add Product</h1>
-      <form id="form">
+      <h1>Add + Edit Product</h1>
+      <form onsubmit="handleSubmit(event)">
         <div class="form-group">
           <label for="exampleInputEmail1">Title</label>
           <input
@@ -32,7 +32,7 @@
             placeholder="Price"
           />
         </div>
-        <button type="submit" class="btn btn-primary">Add</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
       </form>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"></script>

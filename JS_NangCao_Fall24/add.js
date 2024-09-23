@@ -1,19 +1,36 @@
-const form = document.getElementById("form");
+let productId = null;
+const titleElement = document.getElementById("title");
+const priceElement = document.getElementById("price");
 
-window.addEventListener("DOMContentLoaded", init);
-
-function init() {
-  form.addEventListener("submit", handleSubmit);
+async function getProductDetail() {
+  const urlParams = new URLSearchParams(window.location.search);
+  productId = urlParams.get("id");
+  if (!productId) return;
+  const { data } = await axios.get(
+    "http://localhost:3000/products/" + productId
+  );
+  titleElement.value = data.title;
+  priceElement.value = data.price;
 }
+
+getProductDetail();
 
 async function handleSubmit(event) {
   event.preventDefault();
-  const title = document.getElementById("title").value;
-  const price = document.getElementById("price").value;
-
-  await axios.post("http://localhost:3000/products", {
+  const title = titleElement.value;
+  const price = priceElement.value;
+  if (!title) {
+    alert("Title");
+    return;
+  }
+  const data = {
     title,
     price,
-  });
+  };
+  if (productId) {
+    await axios.put("http://localhost:3000/products/" + productId, data);
+  } else {
+    await axios.post("http://localhost:3000/products", data);
+  }
   window.location.href = "/";
 }

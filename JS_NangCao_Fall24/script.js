@@ -29,12 +29,7 @@ async function displayProductList() {
           <td>${product.price} VND</td>
           <td>
             <button class="btn btn-danger" onClick="handleDelete('${product.id}')">Delete</button>
-            <button class="btn btn-info"  type="button"
-        data-toggle="modal"
-        data-target="#exampleModal" id='${product.id}'>Edit</button>
-         <a class="btn btn-info"  type="button"
-      href='/edit.html?id=${product.id}'
-       >Link Edit</a>
+            <a class="btn btn-info" type="button" href='/add.html?id=${product.id}'>Edit</a>
           </td>
         </tr>
       `
@@ -43,19 +38,6 @@ async function displayProductList() {
       </tbody>
     </table>
   `;
-}
-
-async function handleSubmit(event) {
-  event.preventDefault();
-  console.log("id", event.relatedTarget.id);
-
-  const title = document.getElementById("title").value;
-  const price = document.getElementById("price").value;
-
-  const { data } = await axios.post("http://localhost:3000/products", {
-    title,
-    price,
-  });
 }
 
 displayProductList();
