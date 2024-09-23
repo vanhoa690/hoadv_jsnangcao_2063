@@ -3,8 +3,9 @@ const titleElement = document.getElementById("title");
 const priceElement = document.getElementById("price");
 
 async function getProductDetail() {
-  const urlParams = new URLSearchParams(window.location.search);
-  productId = urlParams.get("id");
+  productId = window.location.search.split("=")[1]; // ?productId=id
+  // productId = new URLSearchParams(window.location.search).get("id");
+
   if (!productId) return;
   const { data } = await axios.get(
     "http://localhost:3000/products/" + productId
