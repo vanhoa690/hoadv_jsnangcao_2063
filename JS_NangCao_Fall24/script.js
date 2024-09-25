@@ -42,5 +42,5 @@ async function getProductList() {
        `;
 }
 
-// Run Function
+// 3. Run Function
 getProductList();
