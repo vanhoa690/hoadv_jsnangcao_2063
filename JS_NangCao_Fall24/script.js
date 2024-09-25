@@ -1,4 +1,11 @@
 const listElement = document.getElementById("list");
+
+async function handleDelete(id) {
+  if (confirm("Xoa?")) {
+    await axios.delete(`http://localhost:3000/products/${id}`);
+  }
+}
+
 // 1 Function Render Row Table
 function renderRowTable(product) {
   return `
@@ -7,7 +14,7 @@ function renderRowTable(product) {
             <td>${product.title}</td>
             <td>${product.price} VND</td>
             <td>
-              <button class="btn btn-danger">Delete</button>
+              <button class="btn btn-danger" onClick=handleDelete('${product.id}')>Delete</button>
               <button class="btn btn-info">Edit</button>
             </td>
           </tr>

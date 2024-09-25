@@ -1,18 +1,8 @@
 {
   "products": [
     {
-      "id": 1,
+      "id": "axfc",
       "title": "San pham Update+",
-      "price": 100000
-    },
-    {
-      "id": 2,
-      "title": "San pham Update B+",
-      "price": 100000
-    },
-    {
-      "id": 2,
-      "title": "San pham C+",
       "price": 100000
     }
   ]
