@@ -1,7 +1,20 @@
 const listElement = document.getElementById("list");
+// 1 Function Render Row Table
+function renderRowTable(product) {
+  return `
+        <tr>
+            <th scope="row">${product.id}</th>
+            <td>${product.title}</td>
+            <td>${product.price} VND</td>
+            <td>
+              <button class="btn btn-danger">Delete</button>
+              <button class="btn btn-info">Edit</button>
+            </td>
+          </tr>
+ `;
+}
 
-// Destructuring_assignment
-// {data} = data
+// 2 Function Get Product List
 async function getProductList() {
   const { data } = await axios.get("http://localhost:3000/products");
 
@@ -22,18 +35,5 @@ async function getProductList() {
        `;
 }
 
+// Run Function
 getProductList();
-
-function renderRowTable(product) {
-  return `
-        <tr>
-            <th scope="row">${product.id}</th>
-            <td>${product.title}</td>
-            <td>${product.price} VND</td>
-            <td>
-              <button class="btn btn-danger">Delete</button>
-              <button class="btn btn-info">Edit</button>
-            </td>
-          </tr>
- `;
-}
