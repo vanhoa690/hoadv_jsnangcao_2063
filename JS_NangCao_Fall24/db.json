@@ -2,12 +2,12 @@
   "products": [
     {
       "id": 1,
-      "title": "San pham AA+",
+      "title": "San pham Update+",
       "price": 100000
     },
     {
       "id": 2,
-      "title": "San pham B+",
+      "title": "San pham Update B+",
       "price": 100000
     },
     {
