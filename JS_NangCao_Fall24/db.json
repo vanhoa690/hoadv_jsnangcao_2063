@@ -4,6 +4,36 @@
       "id": "axfc",
       "title": "San pham Update+",
       "price": 100000
+    },
+    {
+      "id": "b403",
+      "title": "Ten San pham Moi",
+      "price": 222
+    },
+    {
+      "id": "86b8",
+      "title": "san pham 1",
+      "price": "120"
+    },
+    {
+      "id": "4406",
+      "title": "san pham 2",
+      "price": 200
+    },
+    {
+      "id": "aadb",
+      "title": "test",
+      "price": 1
+    },
+    {
+      "id": "393d",
+      "title": "test2",
+      "price": 2
+    },
+    {
+      "id": "4b9b",
+      "title": "test3",
+      "price": 3
     }
   ]
 }
