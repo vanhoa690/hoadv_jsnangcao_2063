@@ -15,7 +15,9 @@ function renderRowTable(product) {
             <td>${product.price} VND</td>
             <td>
               <button class="btn btn-danger" onClick=handleDelete('${product.id}')>Delete</button>
-              <button class="btn btn-info">Edit</button>
+              <a href="/add.html?id=${product.id}">
+                <button class="btn btn-info">Edit</button>
+              </a>
             </td>
           </tr>
  `;
