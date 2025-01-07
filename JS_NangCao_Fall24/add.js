@@ -1,6 +1,8 @@
 const titleElement = document.getElementById("title");
 const priceElement = document.getElementById("price");
 const imageElement = document.getElementById("image");
+const categoryElement = document.getElementById("category");
+const isNewElement = document.getElementById("isNew");
 
 // Lay id from Url ?id=xxxx
 const productId = location.search.split("=")[1]; // new URLSearchParams(location.search).get("id")
@@ -13,6 +15,8 @@ async function getProductDeltai() {
   titleElement.value = data.title;
   priceElement.value = data.price;
   imageElement.value = data.image;
+  categoryElement.value = data.category;
+  isNewElement.checked = data.isNew;
 }
 
 getProductDeltai();
@@ -26,7 +30,11 @@ async function handleSubmit(event) {
     title: titleElement.value,
     price: Number(priceElement.value),
     image: imageElement.value,
+    image: imageElement.value,
+    category: categoryElement.value,
+    isNew: isNewElement.checked,
   };
+  console.log(product);
 
   // 3. Check Product ID
   if (productId) {
