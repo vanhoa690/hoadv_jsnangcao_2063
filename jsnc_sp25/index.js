@@ -1,65 +1,32 @@
-// code javascript
-// on tap javascript PHP $tenbien $my_age // snake case
-// JS: var, let, const (ECMA - ES6) // camelcase
+// 1- innerHTML
+// 2- Template string ``
+// 3- map (callback(currentValue))
+// 4- arrow funtion: tach rieng ham moi, or nhet ham vao map
 
-var mySchool = "FPOLY"; // bo qua
-
-let myName = "hoadv"; // khai bao bien ma gia tri sau nay se thay doi
-myName = "hoadv21";
-
-const myAge = 35; // hang so, ko dc gia tri cua bien
-// myAge = 36;
-
-console.log(myName, myAge);
-
-// Kieu du lieu null undefined
-//boolean: true / false
-const likeJS = true;
-
-//number
-const myAge2 = 35;
-
-//string
-myName = "hoadv21222";
-
-// object  {} key: value
-const student = {
-  name: "hoadv",
-  age: 35,
-  subject: "JSNC",
-};
-
-const product = {
-  id: 1,
-  name: "Iphone 16",
-  price: 1000,
-};
-
-//array
-const productIds = [1, 2, 3, 4]; // 0: 1, 1: 2
-const productList = [
-  {
-    id: 1,
-    name: "Iphone 14",
-    price: 1000,
-  },
-  {
-    id: 2,
-    name: "Iphone 15",
-    price: 1000,
-  },
-  {
-    id: 3,
-    name: "Iphone 16",
-    price: 1000,
-  },
+const products = [
+  { id: 1, name: "Sản phẩm A", price: 100 },
+  { id: 2, name: "Sản phẩm B", price: 200 },
+  { id: 3, name: "Sản phẩm C", price: 300 },
+  { id: 4, name: "Sản phẩm D", price: 400 },
+  { id: 5, name: "Sản phẩm E", price: 500 },
+  { id: 6, name: "Sản phẩm F", price: 600 },
 ];
 
-// function
-function deleteProduct() {
-  if (confirm("Xoa san pham")) {
-    console.log("Xoa san pham");
-  }
+// callback(currentValue) cho map
+function renderRow(product) {
+  return `
+    <tr>
+      <td>${product.id}</td>
+      <td>${product.name}</td>
+      <td>Giá: ${product.price} VNĐ</td>
+      <td>
+        <button class="btn btn-danger">Delete</button>
+        <button class="btn btn-info">Edit</button>
+      </td>
+    </tr>
+  `;
 }
 
-// deleteProduct();
+const htmlContent = products.map(renderRow).join("");
+
+document.getElementById("list").innerHTML = htmlContent;
