@@ -22,6 +22,10 @@ function renderRow(product) {
       <td>${product.id}</td>
       <td>${product.name}</td>
       <td>Giá: ${product.price} VNĐ</td>
+      <td>
+        <button class="btn btn-danger">Delete</button>
+        <button class="btn btn-info">Edit</button>
+      </td>
     </tr>
   `;
 }
