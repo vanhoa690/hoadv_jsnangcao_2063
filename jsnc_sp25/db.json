@@ -1,0 +1,54 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Laptop Dell XPS 13",
+      "price": 1500,
+      "category": "Electronics"
+    },
+    { "id": 2, "name": "iPhone 14 Pro", "price": 1200, "category": "Mobile" },
+    {
+      "id": 3,
+      "name": "Samsung Galaxy S23",
+      "price": 1000,
+      "category": "Mobile"
+    },
+    {
+      "id": 4,
+      "name": "Sony WH-1000XM5",
+      "price": 350,
+      "category": "Headphones"
+    },
+    {
+      "id": 5,
+      "name": "MacBook Pro 16",
+      "price": 2500,
+      "category": "Electronics"
+    },
+    {
+      "id": 6,
+      "name": "Apple Watch Series 9",
+      "price": 500,
+      "category": "Wearables"
+    },
+    { "id": 7, "name": "GoPro Hero 11", "price": 400, "category": "Camera" },
+    {
+      "id": 8,
+      "name": "Asus ROG Strix",
+      "price": 1800,
+      "category": "Electronics"
+    },
+    {
+      "id": 9,
+      "name": "Nike Air Max 270",
+      "price": 150,
+      "category": "Footwear"
+    },
+    {
+      "id": 10,
+      "name": "Adidas Ultraboost 22",
+      "price": 180,
+      "category": "Footwear"
+    }
+  ]
+}
