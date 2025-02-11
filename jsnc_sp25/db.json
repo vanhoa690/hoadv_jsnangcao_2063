@@ -17,6 +17,12 @@
       "name": "iPad Air 5",
       "price": 700,
       "category": "Tablet"
+    },
+    {
+      "name": "2",
+      "price": 3,
+      "category": "Tablet",
+      "id": 12
     }
   ]
 }
