@@ -17,6 +17,8 @@
 // 10.1: fetch()
 // 10.2 : axios
 // 11. Xu ly bat dong bo trong javascript: async/await or then
+// 12 delete: buttononClick=funtion delete(product.id)
+// 13 call api: axios.delete("API_URL/id")
 
 // callback(currentValue) dung cho map
 function renderRow(product) {
@@ -58,12 +60,11 @@ getProducts();
 async function deleteProduct(id) {
   if (confirm("Xoa?")) {
     try {
-      const deleteProduct = await axios.delete(
-        `http://localhost:3000/products/${id}`
-      );
-      console.log(deleteProduct);
+      await axios.delete(`http://localhost:3000/products/${id}`);
+      alert(`Xoa thanh cong product ID: ${id}`);
     } catch (error) {
       console.log(error.message);
+      alert(error.message);
     }
   }
 }
