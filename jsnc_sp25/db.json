@@ -1,54 +1,58 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Laptop Dell XPS 13",
-      "price": 1500,
-      "category": "Electronics"
+      "id": 2,
+      "name": "MacBook Pro 14",
+      "price": 2000,
+      "category": "Laptop"
     },
-    { "id": 2, "name": "iPhone 14 Pro", "price": 1200, "category": "Mobile" },
     {
       "id": 3,
-      "name": "Samsung Galaxy S23",
-      "price": 1000,
-      "category": "Mobile"
+      "name": "iPhone 14 Pro",
+      "price": 999,
+      "category": "Smartphone"
     },
     {
       "id": 4,
+      "name": "Samsung Galaxy S23",
+      "price": 850,
+      "category": "Smartphone"
+    },
+    {
+      "id": 5,
       "name": "Sony WH-1000XM5",
       "price": 350,
       "category": "Headphones"
     },
     {
-      "id": 5,
-      "name": "MacBook Pro 16",
-      "price": 2500,
-      "category": "Electronics"
+      "id": 6,
+      "name": "Apple Watch Series 8",
+      "price": 400,
+      "category": "Smartwatch"
     },
     {
-      "id": 6,
-      "name": "Apple Watch Series 9",
-      "price": 500,
-      "category": "Wearables"
+      "id": 7,
+      "name": "iPad Air 5",
+      "price": 700,
+      "category": "Tablet"
     },
-    { "id": 7, "name": "GoPro Hero 11", "price": 400, "category": "Camera" },
     {
       "id": 8,
-      "name": "Asus ROG Strix",
-      "price": 1800,
-      "category": "Electronics"
+      "name": "ASUS ROG Strix G15",
+      "price": 1500,
+      "category": "Gaming Laptop"
     },
     {
       "id": 9,
-      "name": "Nike Air Max 270",
-      "price": 150,
-      "category": "Footwear"
+      "name": "Logitech MX Master 3",
+      "price": 100,
+      "category": "Accessories"
     },
     {
       "id": 10,
-      "name": "Adidas Ultraboost 22",
+      "name": "Razer BlackWidow V4",
       "price": 180,
-      "category": "Footwear"
+      "category": "Keyboard"
     }
   ]
 }

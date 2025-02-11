@@ -4,7 +4,7 @@
 // 3. map, callback trong map
 // 4. arrow function () => {}
 // 5 nodejs
-// 6 json server
+// 6 json server: npm i json-server@0.17.4
 // 7 db.json
 // 8 chay server: json-server --watch db.json
 // 9 Kiểm tra API: REST API
@@ -27,7 +27,7 @@ function renderRow(product) {
       <td>Giá: ${product.price} VNĐ</td>
        <td>${product.category}</td>
       <td>
-        <button class="btn btn-danger">Delete</button>
+        <button onClick=deleteProduct(${product.id}) class="btn btn-danger">Delete</button>
         <button class="btn btn-info">Edit</button>
       </td>
     </tr>
@@ -55,4 +55,15 @@ async function getProducts() {
 getProducts();
 
 // xoa san pham
-async function deleteProduct() {}
+async function deleteProduct(id) {
+  if (confirm("Xoa?")) {
+    try {
+      const deleteProduct = await axios.delete(
+        `http://localhost:3000/products/${id}`
+      );
+      console.log(deleteProduct);
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
+}
