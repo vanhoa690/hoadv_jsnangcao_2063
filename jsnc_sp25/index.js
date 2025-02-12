@@ -29,7 +29,7 @@ function renderRow(product) {
       <td>Giá: ${product.price} VNĐ</td>
        <td>${product.category}</td>
       <td>
-        <button onClick=deleteProduct(${product.id}) class="btn btn-danger">Delete</button>
+        <button class="btn btn-danger">Delete</button>
         <button class="btn btn-info">Edit</button>
       </td>
     </tr>
@@ -57,14 +57,4 @@ async function getProducts() {
 getProducts();
 
 // xoa san pham
-async function deleteProduct(id) {
-  if (confirm("Xoa?")) {
-    try {
-      await axios.delete(`http://localhost:3000/products/${id}`);
-      alert(`Xoa thanh cong product ID: ${id}`);
-    } catch (error) {
-      console.log(error.message);
-      alert(error.message);
-    }
-  }
-}
+async function deleteProduct(id) {}
