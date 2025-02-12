@@ -53,6 +53,12 @@
       "name": "Logitech MX Master 3",
       "price": 100,
       "category": "Accessories"
+    },
+    {
+      "name": "ten san pham 3",
+      "price": 2222,
+      "category": "Accessories",
+      "id": 13
     }
   ]
 }
