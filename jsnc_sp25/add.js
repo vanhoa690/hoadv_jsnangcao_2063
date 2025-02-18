@@ -1,3 +1,16 @@
+// get Detail
+async function getProductDetail() {
+  try {
+    const id = location.search.split("=")[1]; // ?id=4
+    const res = await axios.get(`http://localhost:3000/products/${id}`);
+    console.log("Product:", res.data);
+  } catch (error) {
+    alert(error.message);
+  }
+}
+
+getProductDetail();
+
 async function handleSubmit(event) {
   event.preventDefault(); // Ngăn chặn reload trang
 
