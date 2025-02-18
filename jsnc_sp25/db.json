@@ -1,24 +1,6 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Laptop Dell XPS 13",
-      "price": 1200,
-      "category": "Laptop"
-    },
-    {
-      "id": 2,
-      "name": "MacBook Pro 14",
-      "price": 2000,
-      "category": "Laptop"
-    },
-    {
-      "id": 3,
-      "name": "iPhone 14 Pro",
-      "price": 999,
-      "category": "Smartphone"
-    },
-    {
       "id": 4,
       "name": "Samsung Galaxy S23",
       "price": 850,
@@ -59,6 +41,30 @@
       "price": 2222,
       "category": "Accessories",
       "id": 13
+    },
+    {
+      "name": "ten san pham",
+      "price": 44,
+      "category": "Accessories",
+      "id": 14
+    },
+    {
+      "name": "ten san pham",
+      "price": 23123,
+      "category": "Gaming Laptop",
+      "id": 15
+    },
+    {
+      "name": "22",
+      "price": 222,
+      "category": "Accessories",
+      "id": 16
+    },
+    {
+      "name": "3333",
+      "price": 33,
+      "category": "Accessories",
+      "id": 17
     }
   ]
 }
