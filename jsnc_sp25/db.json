@@ -4,25 +4,25 @@
       "id": 4,
       "name": "Samsung Galaxy S23",
       "price": 850,
-      "category": "Smartphone"
+      "category": "Accessories"
     },
     {
       "id": 5,
       "name": "Sony WH-1000XM5",
       "price": 350,
-      "category": "Headphones"
+      "category": "Accessories"
     },
     {
       "id": 6,
       "name": "Apple Watch Series 8",
       "price": 400,
-      "category": "Smartwatch"
+      "category": "Accessories"
     },
     {
       "id": 7,
       "name": "iPad Air 5",
       "price": 700,
-      "category": "Tablet"
+      "category": "Accessories"
     },
     {
       "id": 8,

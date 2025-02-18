@@ -2,8 +2,13 @@
 async function getProductDetail() {
   try {
     const id = location.search.split("=")[1]; // ?id=4
-    const res = await axios.get(`http://localhost:3000/products/${id}`);
-    console.log("Product:", res.data);
+    // Destructuring: data = res.data
+    const { data } = await axios.get(`http://localhost:3000/products/${id}`);
+    console.log("Product:", data);
+
+    document.getElementById("name").value = data.name;
+    document.getElementById("price").value = data.price;
+    document.getElementById("category").value = data.category;
   } catch (error) {
     alert(error.message);
   }
