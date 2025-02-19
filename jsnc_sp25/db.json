@@ -71,6 +71,12 @@
       "price": 222,
       "category": "Gaming Laptop",
       "id": 19
+    },
+    {
+      "name": "ten san pham",
+      "price": 2,
+      "category": "Gaming Laptop",
+      "id": 20
     }
   ]
 }
