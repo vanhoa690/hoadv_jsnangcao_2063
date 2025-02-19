@@ -22,7 +22,7 @@ async function handleSubmit(event) {
 
     location.href = "/";
 
-    alert(id ? "edit thanh cong " : "them thanh cong");
+    alert("them thanh cong");
   } catch (error) {
     console.log(error.message);
     alert(error.message);

@@ -55,12 +55,6 @@
       "id": 15
     },
     {
-      "name": "22",
-      "price": 222,
-      "category": "Accessories",
-      "id": 16
-    },
-    {
       "name": "3333",
       "price": 33,
       "category": "Accessories",
@@ -71,6 +65,12 @@
       "price": 700,
       "category": "Accessories",
       "id": 18
+    },
+    {
+      "name": "ten san pham",
+      "price": 222,
+      "category": "Gaming Laptop",
+      "id": 19
     }
   ]
 }
