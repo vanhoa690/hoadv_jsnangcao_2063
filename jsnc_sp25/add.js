@@ -1,3 +1,20 @@
+const id = location.search.split("=")[1]; // [?id, 8]
+
+async function getProductDetail() {
+  try {
+    const res = await axios.get(`http://localhost:3000/products/${id}`);
+    console.log("Product:", res.data);
+
+    document.getElementById("name").value = res.data.name;
+    document.getElementById("price").value = res.data.price;
+    document.getElementById("category").value = res.data.category;
+  } catch (error) {
+    alert(error.message);
+  }
+}
+
+getProductDetail();
+
 async function handleSubmit(event) {
   event.preventDefault(); // Ngăn chặn reload trang
 

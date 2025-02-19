@@ -30,7 +30,7 @@ function renderRow(product) {
        <td>${product.category}</td>
       <td>
         <button onClick=deleteProduct(${product.id}) class="btn btn-danger">Delete</button>
-         <a href="/add.html?id=${product.id}"><button class="btn btn-info">Edit</button></a>
+        <a href="/add.html?id=${product.id}"><button class="btn btn-info">Edit</button></a>
       </td>
     </tr>
   `;
