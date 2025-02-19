@@ -1,22 +1,3 @@
-const id = location.search.split("=")[1]; // ?id=4 hoac underfined
-// get Detail
-async function getProductDetail() {
-  if (!id) return; // ko lam gi khi id = underfined
-  try {
-    // Destructuring: data = res.data
-    const { data } = await axios.get(`http://localhost:3000/products/${id}`);
-    console.log("Product:", data);
-
-    document.getElementById("name").value = data.name;
-    document.getElementById("price").value = data.price;
-    document.getElementById("category").value = data.category;
-  } catch (error) {
-    alert(error.message);
-  }
-}
-
-getProductDetail();
-
 async function handleSubmit(event) {
   event.preventDefault(); // Ngăn chặn reload trang
 
@@ -36,12 +17,9 @@ async function handleSubmit(event) {
       price: Number(price),
       category,
     };
-    if (id) {
-      console.log("edit product");
-      await axios.put(`http://localhost:3000/products/${id}`, data);
-    } else {
-      await axios.post("http://localhost:3000/products", data);
-    }
+
+    const product = await axios.post("http://localhost:3000/products", data);
+
     location.href = "/";
 
     alert(id ? "edit thanh cong " : "them thanh cong");
