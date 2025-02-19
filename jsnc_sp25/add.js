@@ -1,6 +1,7 @@
-const id = location.search.split("=")[1]; // [?id, 8]
+const id = location.search.split("=")[1]; // [?id, 8] hoac underfined
 
 async function getProductDetail() {
+  if (!id) return; // stop funtion
   try {
     const res = await axios.get(`http://localhost:3000/products/${id}`);
     console.log("Product:", res.data);
@@ -35,11 +36,16 @@ async function handleSubmit(event) {
       category,
     };
 
-    const product = await axios.post("http://localhost:3000/products", data);
+    if (id) {
+      console.log("edit product");
+      await axios.put(`http://localhost:3000/products/${id}`, data);
+    } else {
+      await axios.post("http://localhost:3000/products", data);
+    }
 
     location.href = "/";
 
-    alert("them thanh cong");
+    alert(id ? "edit thanh cong" : "them thanh cong");
   } catch (error) {
     console.log(error.message);
     alert(error.message);
