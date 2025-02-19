@@ -1,12 +1,6 @@
 {
   "products": [
     {
-      "name": "Samsung Galaxy S24",
-      "price": 16000,
-      "category": "Gaming Laptop",
-      "id": 4
-    },
-    {
       "id": 5,
       "name": "Sony WH-1000XM5",
       "price": 350,
@@ -77,6 +71,13 @@
       "price": 850,
       "category": "Accessories",
       "id": 21
+    },
+    {
+      "name": "ten san pham update",
+      "price": 222222,
+      "category": "Gaming Laptop",
+      "id": 22
     }
-  ]
+  ],
+  "users": []
 }
